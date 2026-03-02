@@ -19,7 +19,15 @@ async function main(){
 app.get('/' ,(req,res)=>{
     res.send("Hi i am root");
 });
-
+app.get('/testListings',(req,res)=>{
+    let sampleListing=new Listing({
+        title:"My dream place",
+        description:"find yourself at places like these",
+        price:1200,
+        location:"Tirupati, Andhra Pradesh",
+        country:"India",
+    })
+});
 app.listen(8080,() =>{
     console.log("app is listening to port 8080");
 });
